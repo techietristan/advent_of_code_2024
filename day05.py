@@ -1,12 +1,13 @@
 import math
 
 with open('day05_input.txt', 'r') as print_queue:
-    print_queue_contents: list[str] = [ line.replace('\n', '') for line in print_queue ]#[1150:1250]
+    print_queue_contents: list[str] = [ line.replace('\n', '') for line in print_queue ]
 
 def get_updates(print_queue_line) -> list[int] | None:
     if ',' not in print_queue_line:
         return None
     page_order: list[int] = [ int(page) for page in print_queue_line.split(',') ]
+
     return page_order
 
 def update_is_valid(update: list[int], rules: tuple[tuple[int, int], ...]) -> bool:
