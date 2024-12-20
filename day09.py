@@ -1,5 +1,3 @@
-from collections.abc import Iterable
-
 with open('day09_input.txt', 'r') as disk_map_file:
     disk_map: str = [ line for line in disk_map_file ][0]
 
